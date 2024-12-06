@@ -5,7 +5,7 @@ import pickle
 import base64
 
 # Load the trained Gradient Boosting model
-with open("xgboost_best_model.pkl", "rb") as file:
+with open("gradient_boosting_best_model.pkl", "rb") as file:
     best_regressor = pickle.load(file)
 
 # Function to make predictions
@@ -14,7 +14,6 @@ def pred(Gender, Age, Height, Weight, Duration, Heart_rate, Body_temp):
     features = np.array([[Gender, Age, Height, Weight, Duration, Heart_rate, Body_temp]])
     prediction = best_regressor.predict(features)
     return prediction[0]
-
 
 # Encode the background image
 def get_base64_image(image_path):
