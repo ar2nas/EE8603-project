@@ -86,7 +86,7 @@ if submitted:
     Gender_numeric = 1 if Gender == "Male" else 0
     result = pred(Gender_numeric, Age, Height, Weight, Duration, Heart_rate, Body_temp)
     st.markdown(f"""
-    ## 🎉 Prediction Results:
+    ## 🎉 Calorie:
     🔥 You have burned approximately **{result:.2f} calories** during your exercise session!  
     Stay consistent, and track your fitness progress with **FitBurnTrack**. 💪
     """)
