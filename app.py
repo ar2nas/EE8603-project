@@ -15,6 +15,7 @@ def pred(Gender, Age, Height, Weight, Duration, Heart_rate, Body_temp):
     prediction = best_regressor.predict(features)
     return prediction[0]
 
+
 # Encode the background image
 def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
